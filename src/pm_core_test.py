@@ -1,19 +1,25 @@
 import unittest
 import json
+import os
 
 from pm_core import PortManager
 from pm_log import LogUtil
 
 class PortManagerTest(unittest.TestCase):
+
     def test_update_port_number(self):
-        manager = PortManager('/Users/kelvinmak/workspace/PortManager/src/cfg/shadowsocks.json')
+        self.json_file = os.path.dirname(os.path.abspath(__file__)) + os.sep + "cfg" + os.sep + "shadowsocks.json"
+        logger = LogUtil()
+        logger.debug(self.json_file)
+
+        manager = PortManager(self.json_file)
         manager.update_port_number(6969)
         self.assertTrue(self.validate_port_num(6969))
 
     def validate_port_num(self, port_num):
         logger = LogUtil()
 
-        with open('/Users/kelvinmak/workspace/PortManager/src/cfg/shadowsocks.json', 'r') as json_file:
+        with open(self.json_file, 'r') as json_file:
             content = json.load(json_file)
             port_num_updated = content['server_port']
             logger.debug(port_num_updated)

@@ -7,3 +7,7 @@
 [2020-02-17 20:40:32] [INFO] update done
 [2020-02-17 20:40:32] [INFO] 127.0.0.1 - - [17/Feb/2020 20:40:32] "[37mPOST /update HTTP/1.1[0m" 200 -
 [2020-02-17 20:54:26] [INFO]  * Detected change in '/Users/kelvinmak/workspace/PortManager/src/pm_core.py', reloading
+[2020-02-17 23:33:38] [DEBUG] e:\workspace\PortManager\src\cfg\shadowsocks.json
+[2020-02-17 23:35:02] [DEBUG] e:\workspace\PortManager\src\cfg\shadowsocks.json
+[2020-02-17 23:35:02] [DEBUG] 6969
+[2020-02-17 23:35:02] [DEBUG] 6969
