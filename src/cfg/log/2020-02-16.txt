@@ -1,0 +1,9 @@
+[2020-02-16 21:56:35] [INFO] {u'redirect': u'', u'obfs_param': u'', u'dns_ipv6': False, u'protocol': u'origin', u'timeout': 120, u'local_port': 1080, u'obfs': u'plain', u'workers': 1, u'fast_open': False, u'server': u'0.0.0.0', u'protocol_param': u'', u'server_port': 9696, u'local_address': u'127.0.0.1', u'password': u'!qaZ@wsX', u'server_ipv6': u'[::]', u'method': u'chacha20'}
+[2020-02-16 21:56:35] [INFO] test
+[2020-02-16 21:56:35] [INFO] test
+[2020-02-16 21:58:57] [INFO] {u'redirect': u'', u'obfs_param': u'', u'dns_ipv6': False, u'protocol': u'origin', u'timeout': 120, u'local_port': 1080, u'obfs': u'plain', u'workers': 1, u'fast_open': False, u'server': u'0.0.0.0', u'protocol_param': u'', u'server_port': 9696, u'local_address': u'127.0.0.1', u'password': u'!qaZ@wsX', u'server_ipv6': u'[::]', u'method': u'chacha20'}
+[2020-02-16 21:58:57] [INFO] test
+[2020-02-16 21:58:57] [INFO] test
+[2020-02-16 22:09:21] [INFO] {u'redirect': u'', u'obfs_param': u'', u'dns_ipv6': False, u'protocol': u'origin', u'timeout': 120, u'local_port': 1080, u'obfs': u'plain', u'workers': 1, u'fast_open': False, u'server': u'0.0.0.0', u'protocol_param': u'', u'server_port': 9696, u'local_address': u'127.0.0.1', u'password': u'!qaZ@wsX', u'server_ipv6': u'[::]', u'method': u'chacha20'}
+[2020-02-16 22:09:21] [INFO] test
+[2020-02-16 22:09:21] [INFO] test

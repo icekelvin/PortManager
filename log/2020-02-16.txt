@@ -1,0 +1,39 @@
+[2020-02-16 21:22:30] [INFO] ************************
+[2020-02-16 21:22:32] [INFO] ************************
+[2020-02-16 21:22:32] [INFO] ************************
+[2020-02-16 21:22:33] [INFO] ************************
+[2020-02-16 21:24:09] [INFO] ************************
+[2020-02-16 21:27:47] [INFO] ************************
+[2020-02-16 21:27:47] [INFO] test
+[2020-02-16 21:27:47] [INFO] test
+[2020-02-16 21:31:29] [INFO] ************************
+[2020-02-16 21:31:29] [INFO] test
+[2020-02-16 21:31:29] [INFO] test
+[2020-02-16 21:31:31] [INFO] ************************
+[2020-02-16 21:31:31] [INFO] test
+[2020-02-16 21:31:31] [INFO] test
+[2020-02-16 21:32:47] [INFO] ************************
+[2020-02-16 21:32:47] [INFO] test
+[2020-02-16 21:32:47] [INFO] test
+[2020-02-16 21:34:59] [INFO] ************************
+[2020-02-16 21:34:59] [INFO] test
+[2020-02-16 21:34:59] [INFO] test
+[2020-02-16 22:09:37] [INFO] {u'redirect': u'', u'obfs_param': u'', u'dns_ipv6': False, u'protocol': u'origin', u'timeout': 120, u'local_port': 1080, u'obfs': u'plain', u'workers': 1, u'fast_open': False, u'server': u'0.0.0.0', u'protocol_param': u'', u'server_port': 9696, u'local_address': u'127.0.0.1', u'password': u'!qaZ@wsX', u'server_ipv6': u'[::]', u'method': u'chacha20'}
+[2020-02-16 22:09:37] [INFO] test
+[2020-02-16 22:09:37] [INFO] test
+[2020-02-16 22:14:07] [INFO] new port num is:6969
+[2020-02-16 22:14:07] [INFO] {u'redirect': u'', u'obfs_param': u'', u'dns_ipv6': False, u'protocol': u'origin', u'timeout': 120, u'local_port': 1080, u'obfs': u'plain', u'workers': 1, u'fast_open': False, u'server': u'0.0.0.0', u'protocol_param': u'', u'server_port': 9696, u'local_address': u'127.0.0.1', u'password': u'!qaZ@wsX', u'server_ipv6': u'[::]', u'method': u'chacha20'}
+[2020-02-16 22:14:07] [INFO] test
+[2020-02-16 22:14:07] [INFO] test
+[2020-02-16 22:14:28] [INFO] new port num is:6969
+[2020-02-16 22:14:28] [INFO] {u'redirect': u'', u'obfs_param': u'', u'dns_ipv6': False, u'protocol': u'origin', u'timeout': 120, u'local_port': 1080, u'obfs': u'plain', u'workers': 1, u'fast_open': False, u'server': u'0.0.0.0', u'protocol_param': u'', u'server_port': 9696, u'local_address': u'127.0.0.1', u'password': u'!qaZ@wsX', u'server_ipv6': u'[::]', u'method': u'chacha20'}
+[2020-02-16 22:16:58] [INFO] new port num is:6969
+[2020-02-16 22:16:58] [INFO] <type 'dict'>
+[2020-02-16 22:17:13] [INFO] new port num is:6969
+[2020-02-16 22:17:13] [INFO] <type 'dict'>
+[2020-02-16 22:17:59] [INFO] new port num is:6969
+[2020-02-16 22:19:44] [INFO] new port num is:6969
+[2020-02-16 22:26:28] [INFO] new port num is:6969
+[2020-02-16 22:28:03] [INFO] new port num is:6969
+[2020-02-16 22:28:26] [INFO] new port num is:6969
+[2020-02-16 22:28:26] [INFO] existing port is: 9696
