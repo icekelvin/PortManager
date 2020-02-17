@@ -13,9 +13,9 @@ class LogUtil:
         else:
             os.mkdir(logs_dir)
         
-        timestamp=time.strftime("%Y-%m-%d",time.localtime())
-        logfilename='%s.txt' % timestamp
-        logfilepath=os.path.join(logs_dir,logfilename)
+        timestamp = time.strftime("%Y-%m-%d",time.localtime())
+        logfilename = '%s.txt' % timestamp
+        logfilepath = os.path.join(logs_dir,logfilename)
         rotatingFileHandler = logging.handlers.RotatingFileHandler(filename =logfilepath,
                                                                    maxBytes = 1024 * 1024 * 50,
                                                                    backupCount = 5)
