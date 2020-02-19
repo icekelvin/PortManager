@@ -2,6 +2,8 @@ import json
 import os
 import time
 import logging
+import ConfigParser
+
 from pm_log import LogUtil
 
 class PortManager:
@@ -42,4 +44,18 @@ class ProcessManager:
         os.system('kill -9 ' + pid)
         time.sleep(5)
         os.system('python /usr/local/shadowsocks/server.py -c /etc/shadowsocks.json -d start')
+
+class Configuration: 
+    def __init__(self):
+        current_path = os.path.dirname(os.path.realpath(__file__)) + os.sep + 'cfg'
+        print('current_path:' + current_path)
+        cfg = os.path.join(current_path, 'setting.ini')
+        self.conf = ConfigParser.ConfigParser()
+        self.conf.read(cfg)
+        
+    def getConfig(self, selection):
+        return self.conf.get(selection, 'config')
+        
+
+
 

@@ -1,5 +1,5 @@
 from flask import Flask, url_for, redirect, request
-from pm_core import PortManager, ProcessManager
+from pm_core import PortManager, ProcessManager, Configuration
 from pm_log import LogUtil
 
 
@@ -11,19 +11,31 @@ def hello_world():
 
 @app.route('/update', methods=['GET', 'POST'])
 def update():
-    form_info = request.form.to_dict()
-    port_num = form_info.get('port_number')
     logger = LogUtil()
-    logger.info("received new port number is :" + port_num)
 
-    manager = PortManager('/etc/shadowsocks.json')
-    manager.update_port_number(port_num)
-    logger.info("update done")
+    try: 
+        form_info = request.form.to_dict()
+        port_num = form_info.get('port_number')
+        logger.info("received new port number is :" + port_num)
 
-    process_mgr = ProcessManager()
-    pid = process_mgr.find_ssr_process_id()
-    process_mgr.kill_and_restart_ssr(pid)
-    return "Greeting, may the Force be with you!"
+        config = Configuration()
+        ssr_cfg = config.getConfig('SSR')
+        logger.info('SSR cofig path on :' + ssr_cfg)
+    
+        manager = PortManager(ssr_cfg)
+        manager.update_port_number(port_num)
+        logger.info("update done")
 
+        process_mgr = ProcessManager()
+        pid = process_mgr.find_ssr_process_id()
+        process_mgr.kill_and_restart_ssr(pid)
+        return "Greeting, may the Force be with you!"
+    except IOError as ioe:
+        logger.error(ioe)
+        return "Can't find SSR config!"
+    except Exception as e:
+        logger.error(e)
+        return "I am your father!"    
+    
 if __name__ == '__main__':
     app.run(debug="true", host="0.0.0.0", port="8000")

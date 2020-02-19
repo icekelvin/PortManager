@@ -2,7 +2,7 @@ import unittest
 import json
 import os
 
-from pm_core import PortManager
+from pm_core import PortManager, Configuration
 from pm_log import LogUtil
 
 class PortManagerTest(unittest.TestCase):
@@ -28,8 +28,15 @@ class PortManagerTest(unittest.TestCase):
         if port_num_updated == port_num:
             return True
         else:
-            return False    
-        
-        
+            return False   
+
+    def test_config_parse(self): 
+        cfg = Configuration()
+        ssr_config_loc = cfg.getConfig('SSR')
+        self.assertEqual('/etc/shadowsocks.json', ssr_config_loc)
+
+        ssr_test_config_loc = cfg.getConfig('SSR_Test')
+        self.assertEqual('/Users/kelvinmak/workspace/PortManager/src/cfg/shadowsocks.json', ssr_test_config_loc)
+
 if __name__ == '__main__':
     unittest.main()
