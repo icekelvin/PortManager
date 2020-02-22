@@ -34,21 +34,13 @@ class PortManager:
 
 
 class ProcessManager:
-    def find_ssr_process_id(self):
-        pid = os.popen('ps -ef | grep server.py').readlines()[0].split()[1]
-        logger = LogUtil()
-        logger.info('SSR process id is :' + pid)
-        return pid
-    
-    def kill_and_restart_ssr(self, pid):
-        os.system('kill -9 ' + pid)
-        time.sleep(5)
-        os.system('python /usr/local/shadowsocks/server.py -c /etc/shadowsocks.json -d start')
+    def restart_ssr(self):
+        os.system('python /usr/local/shadowsocks/server.py -c /etc/shadowsocks.json -d restart')
 
 class Configuration: 
     def __init__(self):
         current_path = os.path.dirname(os.path.realpath(__file__)) + os.sep + 'cfg'
-        print('current_path:' + current_path)
+        print('current_path: {}'.format(current_path))
         cfg = os.path.join(current_path, 'setting.ini')
         self.conf = ConfigParser.ConfigParser()
         self.conf.read(cfg)

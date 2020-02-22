@@ -16,19 +16,18 @@ def update():
     try: 
         form_info = request.form.to_dict()
         port_num = form_info.get('port_number')
-        logger.info("received new port number is :" + port_num)
+        logger.info("received new port number is :{}".format(port_num))
 
         config = Configuration()
         ssr_cfg = config.getConfig('SSR')
-        logger.info('SSR cofig path on :' + ssr_cfg)
+        logger.info('SSR cofig path on :{}'.format(ssr_cfg))
     
         manager = PortManager(ssr_cfg)
         manager.update_port_number(port_num)
         logger.info("update done")
 
         process_mgr = ProcessManager()
-        pid = process_mgr.find_ssr_process_id()
-        process_mgr.kill_and_restart_ssr(pid)
+        process_mgr.restart_ssr()
         return "Greeting, may the Force be with you!"
     except IOError as ioe:
         logger.error(ioe)
@@ -38,4 +37,4 @@ def update():
         return "I am your father!"    
     
 if __name__ == '__main__':
-    app.run(debug="true", host="0.0.0.0", port="8000")
+    app.run(debug="True", host="0.0.0.0", port="8000")
